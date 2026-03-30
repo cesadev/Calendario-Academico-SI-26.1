@@ -37,7 +37,7 @@ async function carregarCronograma(filtro = 'all') {
         const dia = String(hoje.getDate()).padStart(2, '0');
         const mes = String(hoje.getMonth() + 1).padStart(2, '0');
         const ano = hoje.getFullYear();
-        const hojeFormatado = `${dia}/${mes}`;
+        const hojeFormatado = `${dia}/${mes}/${ano}`;
 
         const dadosFiltrados = filtro === 'all' 
             ? dadosOriginais 
