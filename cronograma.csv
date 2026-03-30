@@ -1,23 +1,16 @@
 Data,Dia,Conteúdo A,Conteúdo B,Disciplinas,Lugar
-24/03/2026,terça-feira,Lançamento da Lista 02 de IP,,SD e MD,E232 e E233
-25/03/2026,quarta-feira,,,IP e CAD,Grad05 e E131
-26/03/2026,quinta-feira,MP 4: Funções Especiais (Piso;Teto;Fracionária;Modular),,MD e SD,E233 e E232
-27/03/2026,sexta-feira,,,IP ,Grad05
-28/03/2026,sábado,,,,
-29/03/2026,domingo,,,,
-30/03/2026,segunda-feira,Entrega Projeto 2 SD,,CAD e IP,E131 e Grad05
-31/03/2026,terça-feira,,,SD e MD,E232 e E233
-ABRIL,,,,,
-01/04/2026,quarta-feira,Prova IP Comandos Condicionais + Laços de repetição,,IP e CAD,Grad05 e E131
-02/04/2026,quinta-feira,MP 5: Endorrelações,,MD e SD,E233 e E232
+30/03/2026,segunda-feira,Entrega Projeto 2 SD + Ideação de soluções CAD + Acompanhamento Lista 02 de IP,,CAD e IP,E131 e Grad05
+31/03/2026,terça-feira,SD (Memórias e Flip-Flops) + MD (Endorrelações),,SD e MD,E232 e E233
+01/04/2026,quarta-feira,Prova IP (Comandos Condicionais e Laços de repetição) + Criação de Protótipos CAD,,IP e CAD,Grad05 e E131
+02/04/2026,quinta-feira,Ponto Facultativo + MP5 de MD à distância,,,
 03/04/2026,sexta-feira,FERIADO: Sexta-Feira Santa,,,
 04/04/2026,sábado,,,,
-05/04/2026,domingo,,,,
-06/04/2026,segunda-feira,Entrega Projeto 3 SD,,CAD e IP,E131 e Grad05
-07/04/2026,terça-feira,Lançamento da Lista 03 de IP,,SD e MD,E232 e E233
-08/04/2026,quarta-feira,Roda: Acessibilidade nas Tecnologias de CAD,,IP e CAD,Grad05 e E131
-09/04/2026,quinta-feira,MP 6: Elementos de Aritmética Modular,,MD e SD,E233 e E232
-10/04/2026,sexta-feira,,,IP ,Grad05
+05/04/2026,domingo,Fechamento da Lista 02 de IP,,,
+06/04/2026,segunda-feira,Entrega Projeto 3 SD + Testes de Usabilidades CAD + Assunto Novo IP,,CAD e IP,E131 e Grad05
+07/04/2026,terça-feira,Lançamento da Lista 03 de IP + SD (Linguagem de Máquina (Capítulo 4 do Livro ECS)) + MD (Elementos de Aritmética Modular),,SD e MD,E232 e E233
+08/04/2026,quarta-feira,Roda: Acessibilidade nas Tecnologias de CAD + Acompanhamento Lista 03 IP,,IP e CAD,Grad05 e E131
+09/04/2026,quinta-feira,MP 6: Elementos de Aritmética Modular + SD (Linguagem de Máquina),,MD e SD,E233 e E232
+10/04/2026,sexta-feira,Acompanhamento Lista 03 IP,,IP ,Grad05
 11/04/2026,sábado,,,,
 12/04/2026,domingo,,,,
 13/04/2026,segunda-feira,Entrega Projeto 4 SD,,CAD e IP,E131 e Grad05
@@ -38,7 +31,6 @@ ABRIL,,,,,
 28/04/2026,terça-feira,,,SD e MD,E232 e E233
 29/04/2026,quarta-feira,Prova IP 02 Listas + Funções e Escopo de Variáveis,,IP e CAD,Grad05 e E131
 30/04/2026,quinta-feira,"MP 8: Princípio da Inclusão-Exclusão, Permutações...",,MD e SD,E233 e E232
-MAIO,,,,,
 01/05/2026,sexta-feira,FERIADO: Dia do Trabalho,,,
 02/05/2026,sábado,,,,
 03/05/2026,domingo,,,,
@@ -70,7 +62,6 @@ MAIO,,,,,
 29/05/2026,sexta-feira,Prova IP 03 Recursão + Tuplas e Dicionários,,IP ,Grad05
 30/05/2026,sábado,,,,
 31/05/2026,domingo,,,,
-JUNHO,,,,,
 01/06/2026,segunda-feira,Lançamento do Projeto + Pygame IP,,CAD e IP,E131 e Grad05
 02/06/2026,terça-feira,Desenvolvimento de Projeto MD,Segunda Chamada SD,SD e MD,E232 e E233
 03/06/2026,quarta-feira,,,IP e CAD,Grad05 e E131
@@ -101,7 +92,6 @@ JUNHO,,,,,
 28/06/2026,domingo,,,,
 29/06/2026,segunda-feira,Feira de Impacto Social CAD,,CAD e IP,E131 e Grad05
 30/06/2026,terça-feira,Apresentação dos Projetos MD,Prova Final SD,SD e MD,E232 e E233
-JULHO,,,,,
 01/07/2026,quarta-feira,Prova Final CAD,,IP e CAD,Grad05 e E131
 02/07/2026,quinta-feira,Final de MD,,MD e SD,E233 e E232
 03/07/2026,sexta-feira,Apresentação dos Projetos IP,,IP ,Grad05
