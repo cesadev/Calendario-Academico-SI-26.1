@@ -1,4 +1,11 @@
 let dadosOriginais = [];
+let numeroDias = 14;
+
+// Função auxiliar para converter DD/MM/YYYY para Date
+function parseDate(dateStr) {
+    const [day, month, year] = dateStr.split('/').map(Number);
+    return new Date(year, month - 1, day);
+}
 
 // 1. CARREGAR CRONOGRAMA PRINCIPAL (GERAL)
 async function carregarCronograma(filtro = 'all') {
@@ -25,17 +32,28 @@ async function carregarCronograma(filtro = 'all') {
         const tabelaBody = document.getElementById('table-body');
         tabelaBody.innerHTML = ''; 
 
-        // Lógica para destacar o dia de hoje (Formato DD/MM)
+        // Lógica para destacar o dia de hoje (Formato DD/MM/YYYY)
         const hoje = new Date();
         const dia = String(hoje.getDate()).padStart(2, '0');
         const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+        const ano = hoje.getFullYear();
         const hojeFormatado = `${dia}/${mes}`;
 
         const dadosFiltrados = filtro === 'all' 
             ? dadosOriginais 
             : dadosOriginais.filter(item => item.disciplinas.includes(filtro));
 
-        dadosFiltrados.forEach(item => {
+        // Ordenar por data
+        dadosFiltrados.sort((a, b) => parseDate(a.data) - parseDate(b.data));
+
+        // Filtrar datas futuras (a partir de hoje)
+        hoje.setHours(0, 0, 0, 0);
+        const dadosFuturos = dadosFiltrados.filter(item => parseDate(item.data) >= hoje);
+
+        // Limitar ao número de dias definido se não mostrar tudo
+        const dadosParaMostrar = dadosFuturos.slice(0, numeroDias);
+
+        dadosParaMostrar.forEach(item => {
             const tr = document.createElement('tr');
             
             // Verifica se a data do CSV bate com hoje (ex: 25/03)
@@ -57,6 +75,18 @@ async function carregarCronograma(filtro = 'all') {
             tr.onclick = () => abrirModal(item);
             tabelaBody.appendChild(tr);
         });
+
+        // Adicionar botão "Ver mais" se necessário
+        const seeMoreContainer = document.getElementById('see-more-container');
+        if (dadosFuturos.length > numeroDias) {
+            seeMoreContainer.innerHTML = '<button id="see-more-btn" class="filter-btn" style="margin-top: 10px;">Ver mais</button>';
+            document.getElementById('see-more-btn').addEventListener('click', () => {
+                numeroDias += 7;
+                carregarCronograma(document.querySelector('.filter-btn.active').dataset.filter);
+            });
+        } else {
+            seeMoreContainer.innerHTML = '';
+        }
 
         atualizarPilulaInfo(filtro);
     } catch (e) {
@@ -153,6 +183,7 @@ async function abrirConteudoExtra(materia) {
 
 // 5. INICIALIZAÇÃO
 document.addEventListener('DOMContentLoaded', () => {
+    numeroDias = 14; // Garantir que começa com 14 dias
     carregarCronograma();
     
     // Data no cabeçalho
@@ -165,6 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.onclick = () => {
             document.querySelector('.filter-btn.active').classList.remove('active');
             btn.classList.add('active');
+            numeroDias = 14; // Reset para mostrar 14 dias
             carregarCronograma(btn.dataset.filter);
         };
     });
